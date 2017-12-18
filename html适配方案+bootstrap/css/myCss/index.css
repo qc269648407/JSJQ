@@ -1,0 +1,61 @@
+/* 清除浮动 */
+.clear{
+    clear: both;
+}
+
+/* 最顶部的div */
+.headBarDiv{
+    height: 30px;
+    width: 100%;
+    background: #807f80;
+    color: white;
+    line-height: 30px;
+    font-size: 11px;
+}
+
+.welcomeDiv{
+    float: left;
+    margin-left: 80px;
+}
+
+.exitDiv{
+    float: right;
+    margin-right: 80px;
+}
+
+.changePswDiv{
+    float: right;
+    margin-right: 14px;
+    padding-left: 14px;
+    border-left: 1px white solid;
+    height: 14px;
+    margin-top: 8px;
+    line-height: 14px;
+}
+
+.helloDiv{
+    float: right;
+    margin-right: 14px;
+}
+
+
+.webLogo{
+    float: left;
+}
+.navBar{
+    float: right;
+}
+.nav-pills{
+    font-size: 13px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background: white !important;
+    color: black;
+    border-bottom: 2px black solid;
+    border-radius: 0px;
+}
+
+a{
+    color: black;
+}
+
