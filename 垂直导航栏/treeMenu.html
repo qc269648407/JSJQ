@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/treeMenu.css" />
+		<script type="text/javascript" src="js/json2.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/checkutil.js"></script>
+		<script type="text/javascript" src="js/treeMenu.js"></script>
+		<title></title>
+	</head>
+	<style>
+		body {
+			background: lightgray;
+		}
+		
+		.TreeMenuList>div {
+			margin: 5px;
+		}
+		
+		.TreeMenuList {
+			/**flexbox兼容**/
+			display: -webkit-box;
+			/* OLD - iOS 6-, Safari 3.1-6 */
+			display: -moz-box;
+			/* OLD - Firefox 19- (doesn't work very well) */
+			display: -ms-flexbox;
+			/* TWEENER - IE 10 */
+			display: -webkit-flex;
+			/* NEW - Chrome */
+			display: flex;
+			/**flexbox兼容**/
+			-webkit-box-orient: horizontal;
+			-webkit-flex-direction: row;
+			-moz-flex-direction: row;
+			-ms-flex-direction: row;
+			-o-flex-direction: row;
+			flex-direction: row;
+		}
+	</style>
+
+	<body>
+		<div class="TreeMenuList">
+			<div id="TreeMenu01"></div>
+			<div id="TreeMenu02"></div>
+		</div>
+		<div class="TreeMenuList">
+			<div id="TreeMenu03"></div>
+			<div id="TreeMenu04"></div>
+		</div>
+	</body>
+	<script>
+		var menus01 = [{
+			name: "menu1",
+			href: "",
+			subMenus: [{
+				name: "menu1.1",
+				href: "",
+				subMenus: [{
+					name: "menu1.1.1",
+					href: "#menu1.1.1",
+				}, {
+					name: "menu1.1.2",
+					href: "#menu1.1.2"
+				}]
+			}, {
+				name: "menu1.2",
+				href: "#menu1.2",
+				subMenus: [{
+					name: "menu1.2.1",
+					href: "#menu1.2.1"
+				}, {
+					name: "menu1.2.2",
+					href: "#menu1.2.2"
+				}]
+			}, {
+				name: "menu1.3",
+				href: "#menu1.3",
+				subMenus: [{
+					name: "menu1.3.1",
+					href: "#menu1.3.1"
+				}, {
+					name: "menu1.3.2",
+					href: "#menu1.3.2"
+				}]
+			}]
+		}, {
+			name: "menu2",
+			href: "",
+			subMenus: [{
+				name: "menu2.1",
+				href: "",
+				subMenus: [{
+					name: "menu2.1.1",
+					href: "#menu2.1.1"
+				}, {
+					name: "menu2.1.2",
+					href: "#menu2.1.2"
+				}]
+			}, {
+				name: "menu2.2",
+				href: "#",
+				subMenus: [{
+					name: "menu2.2.1",
+					href: "#menu2.2.1"
+				}, {
+					name: "menu2.2.2",
+					href: "#menu2.2.2"
+				}]
+			}, {
+				name: "menu2.3",
+				href: "#menu2.3",
+				subMenus: [{
+					name: "menu2.3.1",
+					href: "#menu2.3.1"
+				}, {
+					name: "menu2.3.2",
+					href: "#menu2.3.2"
+				}]
+			}]
+		}, {
+			name: "menu3",
+			href: "",
+			subMenus: [{
+				name: "menu3.1",
+				href: "",
+				subMenus: [{
+					name: "menu3.1.1",
+					href: "#menu3.1.1"
+				}, {
+					name: "menu3.1.2",
+					href: "#menu3.1.2"
+				}]
+			}, {
+				name: "menu3.2",
+				href: "#",
+				subMenus: [{
+					name: "menu3.2.1",
+					href: "#menu3.2.1"
+				}, {
+					name: "menu3.2.2",
+					href: "#menu3.2.2"
+				}]
+			}, {
+				name: "menu3.3",
+				href: "#menu3.3",
+				subMenus: [{
+					name: "menu3.3.1",
+					href: "#menu3.3.1"
+				}, {
+					name: "menu3.3.2",
+					href: "#menu3.3.2"
+				}]
+			}]
+		}];
+		var menus02 = JSON.stringify(menus01);
+
+		var menus03 = {
+			name: "menu1",
+			href: "",
+			subMenus: [{
+				name: "menu1.1",
+				href: "",
+				subMenus: [{
+					name: "menu1.1.1",
+					href: "#menu1.1.1",
+				}, {
+					name: "menu1.1.2",
+					href: "#menu1.1.2"
+				}]
+			}, {
+				name: "menu1.2",
+				href: "#menu1.2",
+				subMenus: [{
+					name: "menu1.2.1",
+					href: "#menu1.2.1"
+				}, {
+					name: "menu1.2.2",
+					href: "#menu1.2.2"
+				}]
+			}, {
+				name: "menu1.3",
+				href: "#menu1.3",
+				subMenus: [{
+					name: "menu1.3.1",
+					href: "#menu1.3.1"
+				}, {
+					name: "menu1.3.2",
+					href: "#menu1.3.2"
+				}]
+			}]
+		};
+		var menus04 = JSON.stringify(menus03);
+		var config01 = {
+			treeMenuId: "#TreeMenu01",
+			superLevel: 0,
+			multiple: true,
+		};
+		var config02 = {
+			treeMenuId: "#TreeMenu02",
+			superLevel: 0,
+			multiple: false
+		};
+		var config03 = {
+			treeMenuId: "#TreeMenu03",
+			superLevel: 0,
+			multiple: true
+		}
+		var config04 = {
+			treeMenuId: "#TreeMenu04",
+			superLevel: 0,
+			multiple: false
+		}
+		treeMenu.init(menus01, config01);
+		treeMenu.init(menus02, config02);
+		treeMenu.init(menus03, config03);
+		treeMenu.init(menus04, config04);
+	</script>
+
+</html>
