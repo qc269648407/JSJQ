@@ -1,10 +1,80 @@
+#TreeMenu01{
+	width: 200px;
+}
+
+.MenuBox-1 li{
+	background: #fafafa;
+}
+
+.MenuBox-2{
+	background: #fff;
+}
+
+.MenuBox-2 li{
+	background: #fff;
+}
+
+.TreeMenuList a{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: #0175be !important;
+}
+
+.TreeArrowDown{
+	position: absolute;
+	right: 5px;
+	top:15px;
+}
+
+
+
+div.MenuName{
+	position: relative;
+	height: 24px;
+	line-height: 40px;
+}
+
+
+
+.TreeMenuList>div {
+	margin: 5px;
+}
+
+.MenuName{
+	text-align: center;
+}
+
+.TreeMenuList {
+	/**flexbox兼容**/
+	display: -webkit-box;
+	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;
+	/* OLD - Firefox 19- (doesn't work very well) */
+	display: -ms-flexbox;
+	/* TWEENER - IE 10 */
+	display: -webkit-flex;
+	/* NEW - Chrome */
+	display: flex;
+	/**flexbox兼容**/
+	-webkit-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+}
+
 .TreeMenu {
 	/** TreeMenu整体样式 **/
 	font-family: "edwardian script itc";
 	min-width: 300px;
 }
 
-.TreeMenu> .MenuBox {
+.TreeMenu>.MenuBox {
 	/** 不能选择文本 **/
 	cursor: pointer;
 	-webkit-user-select: none;
@@ -14,15 +84,8 @@
 	user-select: none;
 }
 
-.TreeMenu> .Radius {
-	/** 圆角边框，添加圆角半径的上下Padding **/
-	background: white;
-	border: 1px solid darkgray;
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	padding-top: 8px;
-	padding-bottom: 8px;
+.TreeMenu>.Radius {
+	border: 1px #ccc solid;
 }
 
 .TreeMenu ul,
@@ -106,7 +169,22 @@
 	margin: 0px 20px;
 }
 
-.TreeMenu .TreeArrowDown {
+.TreeMenu .menuBtn {
+
+	position: absolute;
+	right: 10px;
+	top:9px;
+	/** 右边三横线的样式 **/
+	width: 24px;  
+	height: 3px;  
+	border-top: 3px solid darkgray;  
+	border-bottom: 3px solid darkgray;  
+	background-color: darkgray;  
+	padding: 5px 0;  
+	background-clip:content-box;
+}
+
+.TreeMenu .MenuBox-2 .TreeArrowDown {
 	/** 右边三角箭头的样式 **/
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
@@ -122,7 +200,7 @@
 }
 
 .TreeMenu .Level.active .TreeArrowDown.rotate {
-	/** 选中当前菜单右边三角箭头逆时针旋转180度 **/	
+	/** 选中当前菜单右边三角箭头逆时针旋转180度 **/
 	-webkit-transform: rotate(-180deg);
 	-moz-transform: rotate(-180deg);
 	-ms-transform: rotate(-180deg);

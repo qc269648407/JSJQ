@@ -130,9 +130,17 @@
 			ulBox01.appendTo(superEle);
 			var subMenus = menu.subMenus;
 			if(subMenus && checkutil.isArray(subMenus) && subMenus.length > 0) {
-				var arrowDownDiv = $("<div>", {
-					"class": "TreeArrowDown"
-				});
+				var arrowDownDiv;
+
+				if(level=='1'){
+					arrowDownDiv = $("<div>", {
+						"class": "TreeArrowDown menuBtn"
+					});
+				}else{
+					arrowDownDiv = $("<div>", {
+						"class": "TreeArrowDown"
+					});
+				}
 				arrowDownDiv.appendTo(menuNameDiv);
 				eachMenusDom(liItem, subMenus, level);
 			}
