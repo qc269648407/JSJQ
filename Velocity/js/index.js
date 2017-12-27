@@ -18,4 +18,26 @@ $(document).ready(function () {
         });
         $(".element").velocity("reverse");
     });
+
+    //jquery动画写法
+    $(".btn1").click(function () {
+        $("#box").animate({
+            height: "300px",
+            top: "0"
+        });
+        $("button").animate({
+            top: "0"
+        });
+
+
+    });
+    $(".btn2").click(function () {
+        $("#box").animate({
+            height: "100px",
+            top: "-120px"
+        });
+        $("button").animate({
+            top: "-120px"
+        });
+    });
 });
