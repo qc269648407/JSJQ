@@ -40,4 +40,13 @@ $(document).ready(function () {
             top: "-120px"
         });
     });
+
+
+    $(".people").click(function () {
+        $(".people").animate({
+            top: "150px"
+        }, 500).animate({
+            left: "250px"
+        }, 500);
+    });
 });
