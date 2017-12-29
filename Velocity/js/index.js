@@ -46,7 +46,7 @@ $(document).ready(function () {
         $(".people").animate({
             top: "150px"
         }, 500).animate({
-            left: "250px"
-        }, 500);
+            left: "1250px"
+        }, 4500);
     });
 });
