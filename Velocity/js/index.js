@@ -3,8 +3,7 @@ $(document).ready(function () {
     $(".element").on("click", function () {
         $(".element").velocity({
 
-            width: "400px",
-            right: "200px",
+            width: "400px"
         }, {
             duration: 450
         }).velocity({

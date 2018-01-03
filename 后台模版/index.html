@@ -1,0 +1,55 @@
+<!-- description: 写一个后台可以用的菜单模版
+     author: QC <17798502614@189.cn> -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/avalon.js"></script>
+    <script src="./js/jquery-1.12.0.min.js"></script>
+    <script src="./js/index.js"></script>
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body class="indexPage">
+    <div class="topDiv"></div>
+    <div class="mainBodyDiv">
+        <div class="leftBodyDiv" ms-controller="leftBodyDiv">
+            <div class="firstStage" ms-for="n1 in @stageArr">
+                <div class="plusBtn" ms-click='n1.showSubStage=true' ms-if='n1.subStage.length!=0&&!n1.showSubStage'></div>
+                <div class="reduceBtn" ms-click='n1.showSubStage=false' ms-if='n1.subStage.length!=0&&n1.showSubStage'></div>
+                <div class="emptyBtn" ms-if='n1.subStage.length==0'></div>
+                <div class="stageText" ms-click='changeFrame(n1.url)'>{{n1.title}}</div>
+                <div class="clear"></div>
+                <div class="secondStage" ms-if='n1.showSubStage' ms-for="n2 in @n1.subStage">
+                    <div class="plusBtn" ms-click='n2.showSubStage=true' ms-if='n2.subStage.length!=0&&!n2.showSubStage'></div>
+                    <div class="reduceBtn" ms-click='n2.showSubStage=false' ms-if='n2.subStage.length!=0&&n2.showSubStage'></div>
+                    <div class="emptyBtn" ms-if='n2.subStage.length==0'></div>
+                    <div class="stageText" ms-click='changeFrame(n2.url)'>{{n2.title}}</div>
+                    <div class="clear"></div>
+                    <div class="thirdStage" ms-if='n2.showSubStage' ms-for="n3 in @n2.subStage">
+                        <div class="plusBtn" ms-click='n3.showSubStage=true' ms-if='n3.subStage.length!=0&&!n3.showSubStage'></div>
+                        <div class="reduceBtn" ms-click='n3.showSubStage=false' ms-if='n3.subStage.length!=0&&n3.showSubStage'></div>
+                        <div class="emptyBtn" ms-if='n3.subStage.length==0'></div>
+                        <div class="stageText" ms-click='changeFrame(n3.url)'>{{n3.title}}</div>
+                        <div class="clear"></div>
+                        <div class="forthStage" ms-if='n3.showSubStage' ms-for="n4 in @n3.subStage">
+                            <div class="plusBtn" ms-click='n4.showSubStage=true' ms-if='n4.subStage.length!=0&&!n4.showSubStage'></div>
+                            <div class="reduceBtn" ms-click='n4.showSubStage=false' ms-if='n4.subStage.length!=0&&n4.showSubStage'></div>
+                            <div class="emptyBtn" ms-if='n4.subStage.length==0'></div>
+                            <div class="stageText" ms-click='changeFrame(n4.url)'>{{n4.title}}</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightBodyDiv" ms-controller="rightBodyDiv">
+            <iframe style="width:100%;height:100%;border: 0px;" ms-attr="{src: @frameUrl}" ></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
