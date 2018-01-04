@@ -1,0 +1,52 @@
+<!-- description: 写一个后台可以用的菜单模版
+     author: QC <17798502614@189.cn> -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/avalon.js"></script>
+    <script src="./js/jquery-1.12.0.min.js"></script>
+    <script src="./js/bg2.js"></script>
+    <link href="./css/bg2.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body class="bg2Page" ms-controller='bg2Page'>
+    <div class="bg2Title">{{@tableTitle}}</div>
+    <div class="bg2DataNum">共 {{@table2Data.length}} 条</div>
+    <div class="clear"></div>
+
+    <div>
+        <table border="0" cellspacing="0" cellpadding="0" class="bg2Table">
+            <tr>
+                <th style="width:12%">编号</th>
+                <th style="width:12%">数据项名</th>
+                <th style="width:15%">名称</th>
+                <th style="width:7%">类型</th>
+                <th style="width:7%">长度</th>
+                <th style="width:10%">约束</th>
+                <th style="width:10%">值空间</th>
+                <th style="width:15%;font-weight:border;">解释／举例</th>
+                <th style="width:12%">引用编号</th>
+            </tr>
+            <tr ms-for='tableData in table2Data'>
+                <td>{{tableData.no}}</td>
+                <td>{{tableData.dataName}}</td>
+                <td>{{tableData.name}}</td>
+                <td>{{tableData.type}}</td>
+                <td>{{tableData.length}}</td>
+                <td>{{tableData.restrain}}</td>
+                <td>{{tableData.valueSpace}}</td>
+                <td>{{tableData.description}}</td>
+                <td>{{tableData.referenceNum}}</td>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+</body>

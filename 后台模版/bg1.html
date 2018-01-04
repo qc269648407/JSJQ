@@ -1,0 +1,77 @@
+<!-- description: 写一个后台可以用的菜单模版
+     author: QC <17798502614@189.cn> -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/avalon.js"></script>
+    <script src="./js/jquery-1.12.0.min.js"></script>
+    <script src="./js/bg1.js"></script>
+
+
+    <link href="./css/bg1.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body class="bg1Page">
+    <div class="selectRow">
+        <div class="selectName">类别</div>
+        <select class="selectDiv1">
+            <option value="1" selected="selected">标准</option>
+            <option value="2">规范</option>
+        </select>
+
+        <div class="selectName">废行</div>
+        <select class="selectDiv2">
+            <option value="1" selected="selected">现行有效</option>
+            <option value="2">废止作废</option>
+        </select>
+
+        <div class="selectName">级别</div>
+        <select class="selectDiv3">
+            <option value="1" selected="selected">国家标准法规</option>
+            <option value="2">行业标准法规</option>
+            <option value="3">校定标准法规</option>
+            <option value="4">国外标准法规</option>
+            <option value="5">其他</option>
+        </select>
+        <div class="selectName">数集</div>
+        <select class="selectDiv4">
+            <option value="1" selected="selected">元数据</option>
+            <option value="2">代码数据</option>
+        </select>
+        <div class="clear"></div>
+    </div>
+
+    <div>
+        <table border="0" cellspacing="0" cellpadding="0" class="bg1Table"  ms-controller="bg1Table">
+            <tr>
+                <th style="width:5%">序号</th>
+                <th style="width:20%">标准号</th>
+                <th style="width:20%">标准名称</th>
+                <th style="width:10%">类别</th>
+                <th style="width:10%">版本</th>
+                <th style="width:10%">废行</th>
+                <th style="width:25%">简介</th>
+            </tr>
+            <tr ms-for="tableData in @table1Data">
+                <td>{{tableData.no}}</td>
+                <td>{{tableData.standardNo}}</td>
+                <td>{{tableData.standardName}}</td>
+                <td>{{tableData.type}}</td>
+                <td>{{tableData.version}}</td>
+                <td>{{tableData.abolish=='0'?'现行':'废行'}}</td>
+                <td>{{tableData.Description}}</td>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+
+
+</body>

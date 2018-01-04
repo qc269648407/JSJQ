@@ -1,0 +1,27 @@
+.bg2Title{
+    float: left;
+}
+
+.bg2DataNum{
+    float: right;
+}
+
+.bg2Table {
+    margin-left: 2%;
+    width: 96%;
+    margin-top: 5px;
+    table-layout:fixed;
+    background: white;
+}
+
+.bg2Table th {
+    word-wrap: break-word;
+    word-break: break-all;
+    font-weight: normal;
+}
+
+.bg2Table td {
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}

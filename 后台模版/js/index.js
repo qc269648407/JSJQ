@@ -29,12 +29,12 @@ function getStage() {
             showSubStage: false,
             subStage: [{
                 title: '标准数据库',
-                url: '',
+                url: './bg1.html',
                 showSubStage: false,
                 subStage: []
             }, {
                 title: '元数据标准集',
-                url: '',
+                url: './bg2.html',
                 showSubStage: false,
                 subStage: [{
                     title: '国家标准',
@@ -54,7 +54,7 @@ function getStage() {
                 }]
             }, {
                 title: '代码数据标准集',
-                url: '',
+                url: './bg3.html',
                 showSubStage: false,
                 subStage: [{
                     title: '国家标准',

@@ -1,0 +1,27 @@
+.bg3Title{
+    float: left;
+}
+
+.bg3DataNum{
+    float: right;
+}
+
+.bg3Table {
+    margin-left: 10%;
+    width: 88%;
+    margin-top: 5px;
+    table-layout:fixed;
+    background: white;
+}
+
+.bg3Table th {
+    word-wrap: break-word;
+    word-break: break-all;
+    font-weight: normal;
+}
+
+.bg3Table td {
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}

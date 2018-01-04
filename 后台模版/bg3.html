@@ -1,0 +1,44 @@
+<!-- description: 写一个后台可以用的菜单模版
+     author: QC <17798502614@189.cn> -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/avalon.js"></script>
+    <script src="./js/jquery-1.12.0.min.js"></script>
+    <script src="./js/bg3.js"></script>
+    <link href="./css/bg3.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body class="bg3Page" ms-controller='bg3Page'>
+    <div class="bg3Title">{{@tableTitle}}</div>
+    <div class="bg3DataNum">共 {{@table3Data.length}} 条</div>
+    <div class="clear"></div>
+
+    <div>
+        <table border="0" cellspacing="0" cellpadding="0" class="bg3Table">
+            <tr>
+                <th style="width:10%">代码</th>
+                <th style="width:15%">名称</th>
+                <th style="width:10%">简称</th>
+                <th style="width:15%">字母代码</th>
+                <th style="width:50%">说明</th>
+            </tr>
+            <tr ms-for='tableData in table3Data'>
+                <td>{{tableData.no}}</td>
+                <td>{{tableData.name}}</td>
+                <td>{{tableData.shortName}}</td>
+                <td>{{tableData.wordCode}}</td>
+                <td>{{tableData.description}}</td>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+</body>
