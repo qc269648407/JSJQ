@@ -92,3 +92,64 @@ body {
 .forthStage {
     margin-left: 20px;
 }
+
+
+.img1 {
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+    margin-top: 6px;
+}
+
+.img2 {
+    width: 8px;
+    height: 12px;
+    margin-left: 8px;
+    margin-top: 6px;
+}
+
+.firstPage {
+    margin-left: 5px;
+    background: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.frontPage {
+    margin-left: 5px;
+    background: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.nextPage {
+    margin-left: 5px;
+    background: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.lastPage {
+    margin-left: 5px;
+    background: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.pageNumber {
+    width: 28px;
+}
+
+.pageIndexConcroller {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.leftFloat {
+    float: left;
+}

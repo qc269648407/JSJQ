@@ -46,8 +46,8 @@
         <div class="clear"></div>
     </div>
 
-    <div>
-        <table border="0" cellspacing="0" cellpadding="0" class="bg1Table"  ms-controller="bg1Table">
+    <div ms-controller="bg1Table">
+        <table border="0" cellspacing="0" cellpadding="0" class="bg1Table">
             <tr>
                 <th style="width:5%">序号</th>
                 <th style="width:20%">标准号</th>
@@ -67,6 +67,33 @@
                 <td>{{tableData.Description}}</td>
             </tr>
         </table>
+
+        <div class="pageIndexConcroller">
+            <div class="firstPage leftFloat">
+                <img class="img1" src="./assets/first.png" onclick="firstPage();">
+            </div>
+            <div class="frontPage leftFloat">
+                <img class="img2" src="./assets/front.png" onclick="frontPage();">
+            </div>
+
+            <div class="currentPage leftFloat">
+                <div class="leftFloat">第</div>
+                <!-- <input class="pageNumber leftFloat" ms-duplex="@pageIndex" /> -->
+                <div class="leftFloat">{{@pageIndex}}</div>
+                <div class="leftFloat">页</div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="maxNumber leftFloat">共{{@maxPage}}页</div>
+            <div class="nextPage leftFloat">
+                <img class="img2" src="./assets/next.png" onclick="nextPage();">
+            </div>
+            <div class="lastPage leftFloat">
+                <img class="img1" src="./assets/last.png" onclick="lastPage();">
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
 
 
 
