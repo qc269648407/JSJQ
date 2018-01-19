@@ -1,0 +1,26 @@
+<!-- description: iframe高度自适应
+     author: QC <17798502614@189.cn> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body style="background:yellow;margin:0;">
+    <iframe id="frameDiv" height='300' style="width:100%;border:0;" src='./frame.html'></iframe>
+    <script>
+        window.onload = function () {
+            var iframe = document.getElementById('frameDiv');
+            console.info(iframe);
+            if (iframe) {
+                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                if (iframeWin.document.body) {
+                    iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
